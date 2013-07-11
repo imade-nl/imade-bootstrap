@@ -123,12 +123,31 @@
 			$(target).slideToggle();
 		});
 
-		$('.fancybox').magnificPopup({
+		$('.magnific').magnificPopup({
 			type:'image',
 			gallery:{enabled:true}
 		});
 
 		$("div.article-list div.row").clickblock();
+
+		$('a[rel="external"], a.blank').click( function(e) {
+			window.open( $(this).attr('href') );
+			e.preventDefault();
+		});
+
+		/*
+		$('a[href^="http://"]').attr("target", "_blank");
+
+		$('#nav li').has('ul').hover(
+			function () {
+				$(this).find("ul").stop(true, true).fadeIn(300);
+			}, function(){
+				$(this).find('ul').stop(true, true).fadeOut(800);
+			}
+		).find('ul').css('display', 'none');
+
+		*/
+
 	</script>
 
 	 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
