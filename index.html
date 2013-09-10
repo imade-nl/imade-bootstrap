@@ -41,7 +41,7 @@
 
 			<div id="logo"><a href="#"><img src="img/logo.png" alt="www.website.com"></a></div>
 
-			<a class="nav-toggle visible-sm" data-target="#nav-main">
+			<a class="nav-toggle visible-xs" data-target="#nav-main">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -75,7 +75,7 @@
 		<section id="main">
 			<div class="row">
 
-				<div id="content" class="col col-sm-9 col-sm-push-3">
+				<div id="content" class="col col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
 					<h1>Titel van de pagina</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices ante quis quam pulvinar, id laoreet sem lacinia. Sed leo leo, rhoncus sed ipsum auctor, blandit accumsan mi. Mauris elit turpis, rhoncus et aliquam sed, varius id felis. Nunc sodales risus non metus bibendum pellentesque. Duis congue tempor dolor, ac scelerisque arcu euismod at. <a href="#">Aliquam laoreet metus lacus</a>, a placerat nunc laoreet quis.
 					</p>
@@ -89,7 +89,7 @@
 					</ul>
 				</div>
 
-				<div class="col col-sm-3 col-sm-pull-9" id="sidebar">
+				<div id="sidebar" class="col col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
 
 					<div class="panel panel-nav">
 						<nav id="nav-sub">
@@ -136,12 +136,13 @@
 			$(target).slideToggle();
 		});
 
-		$('.magnific').magnificPopup({
+		$('.js-popup').magnificPopup({
 			type:'image',
+			disableOn:768,
 			gallery:{enabled:true}
 		});
 
-		$("div.article-list div.row").clickblock();
+		$(".js-clickblock").clickblock();
 
 		$('a[rel="external"], a.blank').click( function(e) {
 			window.open( $(this).attr('href') );
