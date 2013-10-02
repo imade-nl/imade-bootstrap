@@ -12,6 +12,15 @@
 	<meta name="author" content="Imade">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<?php $page['og_image'] or $page['og_image'] = asset("img/logo.png"); ?>
+	<!--
+	<meta property="og:site_name" content="Imade">
+	<meta property="og:title" content="<?=$page['meta_title']?>">
+	<meta property="og:image" content="<?=$page['og_image']?>">
+	<meta property="og:description" content="<?=$page['description']?>">
+	<meta property="og:url" content="http://<?=__e($_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"])?>">
+	-->
+
 	<!-- Windows mobile IE10 fix -->
 	<script src="js/vendor/ie10viewport-fix.js"></script>
 
@@ -30,8 +39,8 @@
 <body>
 
 	<!--[if lt IE 8]>
-		<section class="container alert alert-danger">
-				Wist u dat uw webbrowser een beetje oud is? Een deel van deze site kan niet goed werken als gevolg daarvan. <a href="http://whatbrowser.org"> Upgrade uw browser </ a> 	voor een snellere, betere en veiliger webervaring.
+		<section class="container">
+				<p class="alert alert-danger">Wist u dat uw webbrowser een beetje oud is? Een deel van deze site kan niet goed werken als gevolg daarvan. <a href="http://whatbrowser.org"> Upgrade uw browser </ a> voor een snellere, betere en veiliger webervaring.</p>
 		</section>
 	<![endif]-->
 

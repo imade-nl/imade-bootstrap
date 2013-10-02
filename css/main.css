@@ -13,7 +13,7 @@ body {
 
 a {
   color: #666;
-  text-decoration: underline;
+  text-decoration: none;
 	-webkit-transition: color 0.1s ease-in;
 	-moz-transition: color 0.1s ease-in;
 	-ms-transition: color 0.1s ease-in;
@@ -28,9 +28,9 @@ a:focus {
 }
 
 a:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #fff;
   outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline-offset: 0px;
 }
 
 
@@ -41,7 +41,11 @@ h4, .h4 { font-size: 16px; }
 h5, .h5 { font-size: 14px; }
 h6, .h6 { font-size: 14px; }
 
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a{ text-decoration: none; }
+h1:first-child, h2:first-child, h3:first-child{ margin-top: 0; }
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a{
+	text-decoration: none;
+	color: inherit;
+}
 
 
 
@@ -82,7 +86,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a{ text-decoration: none; }
 
 
 /* ==========================================================================
-   	NAV
+   	HEADER
    ========================================================================== */
 
 #logo{
@@ -170,10 +174,6 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a{ text-decoration: none; }
 
 #nav-language a{ text-decoration: none; }
 
-
-/* ==========================================================================
-   	HEADER
-   ========================================================================== */
 
 /* HOMEPAGE */
 
