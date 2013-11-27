@@ -26,6 +26,7 @@
 
 	<link rel="stylesheet" href="css/vendor/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="css/vendor/magnific-popup.css" type="text/css">
+	<link rel="stylesheet" href="css/vendor/flexslider.css" type="text/css">
 	<link rel="stylesheet" href="css/base.css" type="text/css">
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 
@@ -138,48 +139,9 @@
 	<!-- javascript page -->
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/vendor/jquery.magnific-popup.js"></script>
-	<script src="js/jquery.clickblock.js"></script>
-	<script>
-		$('.nav-toggle').on('click', function(){
-			var target = $(this).attr('data-target');
-			$(target).slideToggle();
-		});
-
-		$('.js-popup').magnificPopup({
-			type:'image',
-			disableOn:768,
-			gallery:{enabled:true}
-		});
-
-		$(".js-clickblock").clickblock();
-
-		$('a[rel="external"], a.blank').click( function(e) {
-			window.open( $(this).attr('href') );
-			e.preventDefault();
-		});
-
-		/*
-		$('a[href^="http://"]').attr("target", "_blank");
-
-		$('#nav li').has('ul').hover(
-			function () {
-				$(this).find("ul").stop(true, true).fadeIn(300);
-			}, function(){
-				$(this).find('ul').stop(true, true).fadeOut(800);
-			}
-		).find('ul').css('display', 'none');
-
-		*/
-
-	</script>
-
-	 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-	<script>
-		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script>
+	<script src="js/vendor/jquery.flexslider-min.js"></script>
+	<script src="js/vendor/jquery.clickblock.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>

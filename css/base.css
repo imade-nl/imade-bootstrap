@@ -15,6 +15,9 @@ img{
     height: auto;
 }
 
+.mb-20{ margin-bottom: 20px; }
+.mb-30{ margin-bottom: 30px; }
+
 
 /* helpers */
 
@@ -25,6 +28,19 @@ img{
 
 .mouseover{
     cursor: pointer;
+}
+
+.text-nowrap{
+    white-space: nowrap;
+}
+
+.reset-box-sizing,
+.reset-box-sizing *,
+.reset-box-sizing *:before,
+.reset-box-sizing *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 
