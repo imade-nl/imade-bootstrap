@@ -26,7 +26,9 @@ $('a[rel="external"], a.blank').click( function(e) {
 
 /*
 
-$("#content").highlight( $('#input_search').val() );
+if( $('#input_search').length ){
+	 $("#content").highlight( $('#input_search').val() );
+}
 
 $('a[href^="http://"]').attr("target", "_blank");
 

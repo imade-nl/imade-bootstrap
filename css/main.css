@@ -308,7 +308,7 @@ h1, p, ul, ol{
 
 @media screen and (min-width: 768px) {
 	.article-title,
-	.article-body{ float: right; }
+	.article-body{ float: right !important; }
 }
 
 
