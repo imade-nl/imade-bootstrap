@@ -15,7 +15,7 @@ $('.js-popup').magnificPopup({
 	type:'image',
 	disableOn:768,
 	gallery:{enabled:true}
-}).on('click', fucntion(e){
+}).on('click', function(e){
 	e.preventDefault();
 });
 
