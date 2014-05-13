@@ -210,13 +210,19 @@ h1, p, ul, ol{
 
 #nav-main a{
 	display: block;
-	padding: 6px 0;
+	padding: 4px 15px;
+	margin-bottom: 4px;
 	text-decoration: none;
+	color: #126429;
+	background-color: #eeeeee;
+	border-radius: 4px;
 }
+
 #nav-main > ul > li > a{ font-weight: bold; }
 
+#nav-main a:hover,
 #nav-main a.active{
-  	color: #000;
+  	background-color: #ddd;
 }
 
 #nav-main li ul li{
@@ -384,6 +390,49 @@ h1, p, ul, ol{
 	padding-left: 25px;
 	background: url("../img/icon-download.png") no-repeat 0 6px;
 	margin-bottom: 10px;
+}
+
+
+/* ==========================================================================
+   	GALLERY
+   ========================================================================== */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	.gallery-item{
+		float: left;
+		width: 50%;
+	}
+
+	.gallery-item:nth-child(2n+1) { clear: left; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.gallery-item:nth-child(3n+1) { clear: left; }
+}
+
+@media screen and (min-width: 992px) {
+	.gallery-item:nth-child(4n+1) { clear: left; }
+}
+
+
+/* ==========================================================================
+   	S GRID
+   ========================================================================== */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	.col-s-1,.col-s-2,.col-s-3,.col-s-4,.col-s-5,.col-s-6,.col-s-7,.col-s-8,.col-s-9,.col-s-10,.col-s-11{float:left;}
+	.col-s-1{width:8.333333333333332%;}
+	.col-s-2{width:16.666666666666664%;}
+	.col-s-3{width:25%;}
+	.col-s-4{width:33.33333333333333%;}
+	.col-s-5{width:41.66666666666667%;}
+	.col-s-6{width:50%;}
+	.col-s-7{width:58.333333333333336%;}
+	.col-s-8{width:66.66666666666666%;}
+	.col-s-9{width:75%;}
+	.col-s-10{width:83.33333333333334%;}
+	.col-s-11{width:91.66666666666666%;}
+	.col-s-12{width:100%;}
 }
 
 

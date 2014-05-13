@@ -28,8 +28,8 @@ $('a[rel="external"], a.blank').click( function(e) {
 
 /*
 
-if( $('#input_search').length ){
-	 $("#content").highlight( $('#input_search').val() );
+if( $('#search_field').length ){
+	 $("#search_result").highlight( $('#search_field').val() );
 }
 
 $('a[href^="http://"]').attr("target", "_blank");
