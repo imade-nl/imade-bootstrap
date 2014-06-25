@@ -436,5 +436,19 @@ h1, p, ul, ol{
 }
 
 
+/* ==========================================================================
+    REPSONSIVE UTILITIES
+   ========================================================================== */
 
+@media screen and (max-width: 479px) {
+    .block-xs{ display: block; overflow: hidden; }
+}
+
+@media screen and (max-width: 767px) {
+	.hidden-xs-inline{ display: none; }
+}
+
+@media screen and (min-width: 1200px) {
+	.hidden-lg-inline{ display: none; }
+}
 
