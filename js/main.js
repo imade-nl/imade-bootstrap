@@ -1,7 +1,8 @@
 
-$('.nav-toggle').on('click', function(){
+$('.js-toggle').on('click', function(e){
 	var target = $(this).attr('data-target');
-	$(target).slideToggle();
+	if ( $(window).width() < 768 ) $(target).slideToggle(200);
+	if( $(this).attr('href') == "#" ) e.preventDefault();
 });
 
 $('.flexslider').flexslider({
@@ -27,6 +28,8 @@ $('a[rel="external"], a.blank').click( function(e) {
 });
 
 /*
+
+$('input, textarea').placeholder();
 
 if( $('#search_field').length ){
 	 $("#search_result").highlight( $('#search_field').val() );
