@@ -35,22 +35,24 @@ if( $('#search_field').length ){
 	 $("#search_result").highlight( $('#search_field').val() );
 }
 
-$('a[href^="http://"]').attr("target", "_blank");
 
-$('#nav li').has('ul').hover(
-	function () {
-		$(this).find("ul").stop(true, true).fadeIn(300);
-	}, function(){
-		$(this).find('ul').stop(true, true).fadeOut(800);
-	}
-).find('ul').css('display', 'none');
 
-*/
+function setSameHeight()
+{
+	var minHeight = 0;
 
-/*
-	Google Analytics: change UA-XXXXX-X to be your site's ID.
-var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-s.parentNode.insertBefore(g,s)}(document,'script'));
+	$('.js-sameheight')
+		.css('min-height', '0px')
+		.each(function(){
+			var elHeight = $(this).outerHeight(false);
+			if( elHeight > minHeight ) minHeight = elHeight;
+		});
+
+	if( $(window).width() >= 480 ) $('.js-sameheight').css('min-height', minHeight + 'px');
+}
+
+$(window).on('resize', function(){ setSameHeight(); });
+setSameHeight();
+
+
 */

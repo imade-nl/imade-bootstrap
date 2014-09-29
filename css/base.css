@@ -84,11 +84,8 @@ p > img.pull-right{ margin: 4px 0 10px 20px; }
 
 .maps-container {
     position: relative;
-    padding-bottom: 75%;
-    height: 0;
     overflow: hidden;
-    min-height: 360px;
-    max-height: 480px;
+    height: 420px;
 }
 
 .maps-container iframe,
