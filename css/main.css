@@ -437,34 +437,71 @@ h1, p, ul, ol{
 }
 
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+.col-xs-clear-2:nth-child(6n+1) { clear: left; }
+.col-xs-clear-3:nth-child(4n+1) { clear: left; }
+.col-xs-clear-4:nth-child(3n+1) { clear: left; }
+.col-xs-clear-6:nth-child(2n+1) { clear: left; }
+
+.col-xs-right{ float: right; }
+.col-xs-left{ float: left; }
+
+
+@media screen and (min-width: 480px){
+	.col-s-clear-2:nth-child(6n+1), .col-s-clear-2:nth-child(4n+1), .col-s-clear-2:nth-child(4n+1), .col-s-clear-2:nth-child(2n+1){ clear: none; }
+	.col-s-clear-3:nth-child(6n+1), .col-s-clear-3:nth-child(4n+1), .col-s-clear-3:nth-child(4n+1), .col-s-clear-3:nth-child(2n+1){ clear: none; }
+	.col-s-clear-4:nth-child(6n+1), .col-s-clear-4:nth-child(4n+1), .col-s-clear-4:nth-child(4n+1), .col-s-clear-4:nth-child(2n+1){ clear: none; }
+	.col-s-clear-6:nth-child(6n+1), .col-s-clear-6:nth-child(4n+1), .col-s-clear-6:nth-child(4n+1), .col-s-clear-6:nth-child(2n+1){ clear: none; }
+	.col-s-clear-2:nth-child(6n+1) { clear: left; }
+	.col-s-clear-3:nth-child(4n+1) { clear: left; }
+	.col-s-clear-4:nth-child(3n+1) { clear: left; }
 	.col-s-clear-6:nth-child(2n+1) { clear: left; }
+
 	.col-s-right{ float: right; }
+	.col-s-left{ float: left; }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) {
+	.col-sm-clear-2:nth-child(6n+1), .col-sm-clear-2:nth-child(4n+1), .col-sm-clear-2:nth-child(4n+1), .col-sm-clear-2:nth-child(2n+1){ clear: none; }
+	.col-sm-clear-3:nth-child(6n+1), .col-sm-clear-3:nth-child(4n+1), .col-sm-clear-3:nth-child(4n+1), .col-sm-clear-3:nth-child(2n+1){ clear: none; }
+	.col-sm-clear-4:nth-child(6n+1), .col-sm-clear-4:nth-child(4n+1), .col-sm-clear-4:nth-child(4n+1), .col-sm-clear-4:nth-child(2n+1){ clear: none; }
+	.col-sm-clear-6:nth-child(6n+1), .col-sm-clear-6:nth-child(4n+1), .col-sm-clear-6:nth-child(4n+1), .col-sm-clear-6:nth-child(2n+1){ clear: none; }
 	.col-sm-clear-2:nth-child(6n+1) { clear: left; }
 	.col-sm-clear-3:nth-child(4n+1) { clear: left; }
 	.col-sm-clear-4:nth-child(3n+1) { clear: left; }
 	.col-sm-clear-6:nth-child(2n+1) { clear: left; }
+
 	.col-sm-right{ float: right; }
+	.col-sm-left{ float: left; }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) {
+	.col-md-clear-2:nth-child(6n+1), .col-md-clear-2:nth-child(4n+1), .col-md-clear-2:nth-child(4n+1), .col-md-clear-2:nth-child(2n+1){ clear: none; }
+	.col-md-clear-3:nth-child(6n+1), .col-md-clear-3:nth-child(4n+1), .col-md-clear-3:nth-child(4n+1), .col-md-clear-3:nth-child(2n+1){ clear: none; }
+	.col-md-clear-4:nth-child(6n+1), .col-md-clear-4:nth-child(4n+1), .col-md-clear-4:nth-child(4n+1), .col-md-clear-4:nth-child(2n+1){ clear: none; }
+	.col-md-clear-6:nth-child(6n+1), .col-md-clear-6:nth-child(4n+1), .col-md-clear-6:nth-child(4n+1), .col-md-clear-6:nth-child(2n+1){ clear: none; }
 	.col-md-clear-2:nth-child(6n+1) { clear: left; }
 	.col-md-clear-3:nth-child(4n+1) { clear: left; }
 	.col-md-clear-4:nth-child(3n+1) { clear: left; }
 	.col-md-clear-6:nth-child(2n+1) { clear: left; }
+
 	.col-md-right{ float: right; }
+	.col-md-left{ float: left; }
 }
 
 @media screen and (min-width: 1200px) {
+	.col-lg-clear-2:nth-child(6n+1), .col-lg-clear-2:nth-child(4n+1), .col-lg-clear-2:nth-child(4n+1), .col-lg-clear-2:nth-child(2n+1){ clear: none; }
+	.col-lg-clear-3:nth-child(6n+1), .col-lg-clear-3:nth-child(4n+1), .col-lg-clear-3:nth-child(4n+1), .col-lg-clear-3:nth-child(2n+1){ clear: none; }
+	.col-lg-clear-4:nth-child(6n+1), .col-lg-clear-4:nth-child(4n+1), .col-lg-clear-4:nth-child(4n+1), .col-lg-clear-4:nth-child(2n+1){ clear: none; }
+	.col-lg-clear-6:nth-child(6n+1), .col-lg-clear-6:nth-child(4n+1), .col-lg-clear-6:nth-child(4n+1), .col-lg-clear-6:nth-child(2n+1){ clear: none; }
 	.col-lg-clear-2:nth-child(6n+1) { clear: left; }
 	.col-lg-clear-3:nth-child(4n+1) { clear: left; }
 	.col-lg-clear-4:nth-child(3n+1) { clear: left; }
 	.col-lg-clear-6:nth-child(2n+1) { clear: left; }
+
 	.col-lg-right{ float: right; }
+	.col-lg-left{ float: left; }
 }
+
 
 
 /* ==========================================================================
