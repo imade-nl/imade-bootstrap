@@ -19,6 +19,7 @@ img.pull-left{ margin: 4px 20px 10px 0; }
 img.pull-right{ margin: 4px 0 10px 20px; }
 
 
+.mb-0{ margin-bottom: 0px !important; }
 .mb-10{ margin-bottom: 10px; }
 .mb-20{ margin-bottom: 20px; }
 .mb-30{ margin-bottom: 30px; }
@@ -26,6 +27,7 @@ img.pull-right{ margin: 4px 0 10px 20px; }
 .mb-50{ margin-bottom: 50px; }
 .mb-60{ margin-bottom: 60px; }
 
+.mt-0{ margin-top: 0px !important; }
 .mt-10{ margin-top: 10px; }
 .mt-20{ margin-top: 20px; }
 .mt-30{ margin-top: 30px; }
