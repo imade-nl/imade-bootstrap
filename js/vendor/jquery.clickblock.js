@@ -21,7 +21,7 @@
 
 				if(options.title)
 				{
-					var title = a.text().trim();
+					var title = (a.attr('title')) ? a.attr('title') : a.text().trim();
 					obj.attr('title', title);
 				}
 
