@@ -62,11 +62,7 @@
 			<span class="icon-bar"></span>
 		</a>
 
-		<nav id="quick-links">
-		</nav>
-
-
-		<nav id="nav">
+		<nav id="nav" class="nav">
 			<ul class="nav-main">
 				<li><a class="active" href="#">company</a>
 					<ul>
@@ -161,14 +157,55 @@
 	</div>
 </section>
 
+
 <footer class="footer">
-	<div class="container">
-		<div class="pull-left">&copy; copyright Imade | <a href="#">Terms and Conditions</a></div>
-		<div class="pull-right">
-			socioal icons...
+	<div class="footer-contact">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-4 mb-30">
+					<div itemscope itemtype="http://schema.org/Organization">
+						<span itemprop="name">Bedrijfsnaam</span>
+						<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+							<div itemprop="streetAddress">Straatnaam 123</div>
+							<span itemprop="postalCode">1234 AA</span>
+							<span itemprop="addressLocality">Plaats</span>
+						</div>
+						<span itemprop="email"><a href="mailto:info@email.nl">info@email.nl</a></span>
+						<span itemprop="telephone">+31 (0)174 123 456</span>
+					</div>
+				</div>
+				<div class="col-sm-4 mb-30">
+					<form class="form-inline form-sm mb-10" role="form" action="" method="post">
+						<div class="form-group">
+							<label class="sr-only" for="inputEmail2">E-mail</label>
+							<input type="email" class="form-control form-control-inverted" id="inputEmail2" placeholder="E-mail" name="email">
+						</div>
+						<button type="submit" class="btn btn-warning">Inschrijven</button>
+					</form>
+					<p>Ontvang ook onze nieuwsbrief.</p>
+				</div>
+				<div class="col-sm-4 mb-30">
+					<div class="text-right">
+						<a href="#" rel="external" title="twitter" class="btn-social"><img src="img/icon-twitter.png" alt="twitter"></a>
+						<a href="#" rel="external" title="facebook" class="btn-social"><img src="img/icon-facebook.png" alt="facebook"></a>
+						<a href="#" rel="external" title="linkedin" class="btn-social"><img src="img/icon-linkedin.png" alt="linkedin"></a>
+						<a href="#" rel="external" title="pinterest" class="btn-social"><img src="img/icon-pinterest.png" alt="pinterest"></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="footer-about">
+		<div class="container">
+				&copy; copyright 2014 Bedrijfsnaam   &nbsp;
+				<a href="<?=site_url('voorwaarden')?>">Algemene voorwaarden</a>   &nbsp;
+				<a href="<?=site_url('disclaimer')?>">Disclaimer</a>
 		</div>
 	</div>
 </footer>
+
 
 
 <!-- javascript page -->

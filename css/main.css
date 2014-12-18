@@ -116,11 +116,13 @@ h1, p, ul, ol{
    ========================================================================== */
 
 .nav{
+	clear: both;
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
 	.nav{
+		clear: none;
 		display: block !important;
 	}
 }
@@ -170,7 +172,6 @@ h1, p, ul, ol{
 
 .nav-main{
 	margin-top: 20px;
-	display: none;
 }
 
 .nav-main a{
@@ -199,7 +200,6 @@ h1, p, ul, ol{
 	.nav-main{
 		float: right;
 		margin-top: 32px;
-		display: block !important;
 	}
 
 	.nav-main li ul{ display: none; }
@@ -289,6 +289,30 @@ h1, p, ul, ol{
 
 .form-error{
 	border-color: #B94A48;
+}
+
+
+/* ==========================================================================
+	IMAGES
+   ========================================================================== */
+
+@media screen and (min-width: 768px) {
+	.img-zoom{
+		overflow: hidden;
+	}
+
+	.img-zoom img{
+		min-width: 100%;
+		transform:scale(1.05,1.05);
+		-webkit-transition: transform 0.1s ease-in;
+		-moz-transition: transform 0.1s ease-in;
+		-ms-transition: transform 0.1s ease-in;
+		-o-transition: transform 0.1s ease-in;
+		transition: transform 0.1s ease-in;
+	}
+
+	.img-zoom:hover img,
+	.mouseover .img-zoom img{ transform:scale(1.0,1.0); }
 }
 
 
