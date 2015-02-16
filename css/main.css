@@ -3,12 +3,16 @@
    	TYPOGRAPHY
    ========================================================================== */
 
+html, body{
+	height: 100%;
+}
+
 body {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 24px;
 	color: #333;
-	background-color: #ffffff;
+	background-color: #FFF;
 }
 
 a {
@@ -34,31 +38,38 @@ a:focus {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
-	font-family: 'Asap', sans-serif;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
-h1, .h1 { font-size: 28px; }
-h2, .h2 { font-size: 22px; }
+h1, .h1 { font-size: 24px; margin: 0 0 30px 0;}
+h2, .h2 { font-size: 20px; }
 h3, .h3 { font-size: 18px; }
 h4, .h4 { font-size: 16px; }
 h5, .h5 { font-size: 14px; }
 h6, .h6 { font-size: 14px; }
 
-h1:first-child, h2:first-child, h3:first-child{ margin-top: 0; }
+h2:first-child, h3:first-child{ margin-top: 0; }
 
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a{
+h2 a, .h2 a, h3 a, .h3 a{
 	text-decoration: none;
 	color: inherit;
 }
 
-h1, p, ul, ol{
+p, ul, ol{
 	margin-bottom: 20px;
 }
 
 
+@media screen and (min-width: 768px) {
+	h1, .h1 { font-size: 36px; }
+	h2, .h2 { font-size: 28px; }
+	h3, .h3 { font-size: 22px; }
+	h4, .h4 { font-size: 18px; }
+}
+
 
 /* ==========================================================================
-   	STRUCTURE
+   	CONTAINER
    ========================================================================== */
 
 .container{
@@ -75,12 +86,105 @@ h1, p, ul, ol{
 
 
 /* ==========================================================================
+   	PAGE
+   ========================================================================== */
+
+@media screen and (max-width: 767px) {
+	.page{
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	.page-section,
+	.page-nav{
+		-webkit-transition: left 0.2s ease-in;
+		-moz-transition: left 0.2s ease-in;
+		-ms-transition: left 0.2s ease-in;
+		-o-transition: left 0.2s ease-in;
+		transition: left 0.2s ease-in;
+	}
+
+	.page-section{
+		left: 0;
+		position: relative;
+		background-color: #FFF;
+	}
+
+	.page-nav{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: -80%;
+		width: 80%;
+		overflow: auto;
+		cursor: auto;
+	}
+
+	.page-show-nav .page-section{
+		left: 80%;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.page-show-nav .page-section:after{
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 99;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(255,255,255,0.2);
+	}
+
+	.page-show-nav .page-nav{
+		left: 0;
+	}
+}
+
+
+.page-header{
+	padding-top: 15px;
+}
+
+.page-body{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.page-footer{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+/* ==========================================================================
+   	HEADER
+   ========================================================================== */
+
+.header-top{
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+
+/* ==========================================================================
    	LOGO'S
    ========================================================================== */
 
 .logo{
-	float: left;
-	max-width: 50%;
+	margin-right: 120px;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+	.logo{
+		margin-right: 0;
+		float: left;
+	}
 }
 
 
@@ -89,27 +193,109 @@ h1, p, ul, ol{
    ========================================================================== */
 
 .nav-toggle {
-	border: 1px solid #BBB;
-	border-radius: 4px;
-	padding: 8px 12px;
 	position: absolute;
 	right: 15px;
-	top: 40px;
+	top: 50px;
+	display: inline-block;
+	padding: 8px 10px;
 	cursor: pointer;
-}
-.nav-toggle:hover { background-color:#f2f2f2; }
-
-.nav-toggle .icon-bar {
-    background-color: #AAA;
-    border-radius: 1px;
-    display: block;
-    height: 2px;
-    width: 22px;
-}
-.nav-toggle .icon-bar + .icon-bar {
-    margin-top: 4px;
+	background-color: rgba(0,0,0,0.1);
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	font-size: 16px;
 }
 
+.nav-toggle:hover {
+	color: #333;
+	text-decoration: none;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.nav-toggle i{
+	margin-right: 4px;
+}
+
+.nav-close{
+	float: right;
+	margin: 10px;
+	padding: 8px 10px;
+	display: inline-block;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.1);
+	text-decoration: none;
+	color: #FFF;
+}
+
+.nav-close:hover{
+	text-decoration: none;
+	color: #FFF;
+	background-color: rgba(0,0,0,0.2);
+}
+
+
+@media screen and (min-width: 768px) {
+	.nav-toggle,
+	.nav-close{
+		display: none;
+	}
+}
+
+
+/* ==========================================================================
+   	ICONS
+   ========================================================================== */
+
+.icon-nav{
+	display: inline-block;
+	position: relative;
+	height: 4px;
+	width: 22px;
+	background-color: #333;
+	margin: 4px 0;
+	border-radius: 1px;
+}
+
+.icon-nav:before,
+.icon-nav:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: inherit;
+	border-radius: 1px;
+}
+
+.icon-nav:before{ top: -7px; }
+.icon-nav:after{ top: 7px; }
+
+
+.icon-close{
+	display: block;
+	font-size: 32px;
+}
+.icon-close:before{
+	content: "×";
+}
+
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.icon-arrow-down-white{
+	width: 21px;
+	height: 14px;
+	background: url("../img/arrow-down-white.png") no-repeat 0 0;
+}
+
+.icon-arrow-up-white{
+	width: 21px;
+	height: 14px;
+	background: url("../img/arrow-up-white.png") no-repeat 0 0;
+}
 
 /* ==========================================================================
    	NAV
@@ -117,115 +303,81 @@ h1, p, ul, ol{
 
 .nav{
 	clear: both;
-	display: none;
 }
+
+.nav a{
+	display: block;
+	padding: 10px 15px;
+	color: #FFF;
+	font-size: 18px;
+	text-decoration: none;
+	border-top: 1px solid #444;
+}
+
+.nav a:hover,
+.nav a:focus{
+	background-color: rgba(255,255,255,0.1);
+}
+
+.nav a.active{
+	background-color: #428BCA;
+}
+
+.nav li ul a{
+	font-size: 16px;
+	padding-left: 30px;
+}
+
 
 @media screen and (min-width: 768px) {
 	.nav{
-		clear: none;
-		display: block !important;
+		padding-top: 40px;
+	}
+
+	.nav li{
+		float: left;
+	}
+
+	.nav a{
+		color: #333;
+		border-top: none;
+	}
+
+	.nav a.active{
+		color: #428BCA;
+		background-color: transparent;
+	}
+
+	.nav li ul{
+		display: none;
 	}
 }
 
 
 /* ==========================================================================
-   	NAV INLINE
+   	NAV-PRIMARY
    ========================================================================== */
-
-
-.nav-inline{
-	line-height: 14px;
-	margin-left: -8px;
-	margin-right: -8px;
-}
-
-.nav-inline li{
-	padding-left: 8px;
-	padding-right: 8px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.nav-inline a{
-	color: #454545;
-	text-decoration: none;
-}
-
-.nav-inline a.active,
-.nav-inline a:hover{
-	text-decoration: underline;
-}
-
-@media screen and (min-width: 480px) {
-	.nav-inline li{
-		display: inline-block;
-		border-left: 1px solid #454545;
-	}
-
-	.nav-inline li:first-child{ border-left: none; }
-}
-
-
-/* ==========================================================================
-   	NAV MAIN
-   ========================================================================== */
-
-.nav-main{
-	margin-top: 20px;
-}
-
-.nav-main a{
-	display: block;
-	padding: 4px 15px;
-	margin-bottom: 4px;
-	text-decoration: none;
-	color: #126429;
-	background-color: #eeeeee;
-	border-radius: 4px;
-	font-size: 16px;
-}
-
-.nav-main > li > a{ font-weight: bold; }
-
-.nav-main a:hover,
-.nav-main a.active{
-  	background-color: #ddd;
-}
-
-.nav-main li ul li{
-	padding-left: 20px;
-}
 
 @media screen and (min-width: 768px) {
-	.nav-main{
+	.nav-primary{
 		float: right;
-		margin-top: 32px;
-	}
-
-	.nav-main li ul{ display: none; }
-
-	.nav-main li{
-		float: left;
-		margin-left: 20px;
-	}
-
-	.nav-main li:first-child{ margin-left: 0; }
-
-	.nav-main > li > a{
-		font-weight: normal;
-	}
-
-	.nav-main a.active{
-		color: #000;
 	}
 }
 
 
-@media screen and (min-width: 992px) {
-	.nav-main > li{
-		margin-left: 30px;
+/* ==========================================================================
+   	NAV-SECONDARY
+   ========================================================================== */
+
+@media screen and (min-width: 768px) {
+	.nav-secondary{
+		position: absolute;
+		right: 15px;
+		top: 20px;
+		font-size: 16px;
 	}
 }
+
 
 
 /* ==========================================================================
@@ -273,6 +425,31 @@ h1, p, ul, ol{
 
 .btn{
 	text-decoration: none;
+}
+
+.btn-scrolltop{
+	opacity: 0;
+	display: inline-block;
+	position: fixed;
+	z-index: 80;
+	right: 15px;
+	bottom: 15px;
+	padding: 10px;
+	border-radius: 4px;
+	background-color: rgba(0,0,0,0.5);
+	-webkit-transition: opacity 0.5s ease-in;
+	-moz-transition: opacity 0.5s ease-in;
+	-ms-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+}
+
+.btn-scrolltop:hover{
+	background-color: rgba(0,0,0,0.65);
+}
+
+.btn-scrolltop-show{
+	opacity: 1;
 }
 
 

@@ -21,9 +21,6 @@
 	<meta property="og:url" content="http://<?=__e($_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"])?>">
 	-->
 
-	<!-- Windows mobile IE10 fix -->
-	<script src="js/vendor/ie10viewport-fix.js"></script>
-
 	<link rel="stylesheet" href="css/vendor/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="css/vendor/magnific-popup.css" type="text/css">
 	<link rel="stylesheet" href="css/vendor/flexslider.custom.css" type="text/css">
@@ -32,180 +29,184 @@
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
 
 <body>
 
-<div class="assist">
+<div class="sr-only">
 	<p>Ga direct naar <a href="#content">de inhoud</a>.</p>
 </div>
 
-<!--[if lt IE 8]>
-<section class="alert alert-danger">
-	<div class="container">Uw browser is te oud om gebruik te kunnen maken van deze website.<br>
-	<a class="alert-link" href="http://www.whatbrowser.org/intl/nl/" rel="external">Upgrade uw browser</a> of download <a class="alert-link" href="http://www.google.com/chrome" rel="external">Google Chrome</a> of <a class="alert-link" href="http://www.firefox.com/" rel="external">Firefox</a> voor een snellere, betere en veiliger webervaring.</div>
-</section>
-<![endif]-->
+<div class="page">
 
+	<!--[if lt IE 8]>
+	<section class="page-section alert alert-danger">
+		<div class="container">Uw browser is te oud om gebruik te kunnen maken van deze website.<br>
+		<a class="alert-link" href="http://www.whatbrowser.org/intl/nl/" rel="external">Upgrade uw browser</a> of download <a class="alert-link" href="http://www.google.com/chrome" rel="external">Google Chrome</a> of <a class="alert-link" href="http://www.firefox.com/" rel="external">Firefox</a> voor een snellere, betere en veiliger webervaring.</div>
+	</section>
+	<![endif]-->
 
-<header class="header">
-	<div class="container">
+	<header class="page-section page-header" id="header">
+		<div class="container">
 
-		<div class="logo"><a href="#"><img src="img/logo.png" alt="www.website.com"></a></div>
-
-		<a class="nav-toggle visible-xs js-toggle" data-target="#nav">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
-
-		<nav id="nav" class="nav">
-			<ul class="nav-main">
-				<li><a class="active" href="#">company</a>
-					<ul>
-						<li><a href="#">philosophy</a></li>
-						<li><a href="#">sustainability</a></li>
-						<li><a href="#">press</a></li>
-						<li><a href="#">fairsa</a></li>
-					</ul>
-				</li>
-				<li><a href="#">collection</a>
-					<ul>
-						<li><a href="#">philosophy</a></li>
-						<li><a href="#">sustainability</a></li>
-						<li><a href="#">press</a></li>
-						<li><a href="#">fairsa</a></li>
-					</ul>
-				</li>
-				<li><a href="#">storelocator</a></li>
-				<li><a href="#">blog</a></li>
-				<li><a href="#">contact</a></li>
-			</ul>
-
-			<ul class="nav-inline nav-top">
-				<li><a href="#">Actueel</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-
-			<div class="quick-search">
-				<form method="get" action="<?=site_url("search")?>">
-					<input type="text" placeholder="Zoek op trefwoord" class="form-control" name="q">
-					<button type="submit">go</button>
-				</form>
+			<div class="header-top">
+				<a class="nav-toggle js-nav-toggle">
+					<i class="icon-nav"></i> menu
+				</a>
+				<span class="header-contact">Maak uw afspraak via <a href="tel:0174 - 440605">0174 - 440605</a></span>
 			</div>
-		</nav>
 
-	</div>
-</header>
+			<div class="logo"><a href="#"><img src="http://placehold.it/280x120&amp;text=logo" alt="www.website.nl"></a></div>
 
-<section class="leader">
-	<div class="container">
-		<div class="flexslider">
-			<ul class="slides">
-				<li><img src="" alt="slide"></li>
-			</ul>
-		</div>
-	</div>
-</section>
+			<nav class="page-nav clearfix">
+				<a class="nav-close js-nav-toggle"><i class="icon-close"></i></a>
 
-<section id="content">
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
-
-				<ul class="list-inline breadcrumb hidden-xs">
-					<li><a href="#">Home</a></li>
-					<li>Titel van de pagina</li>
+				<ul class="nav nav-primary">
+					<li><a class="active" href="#">Lorem</a>
+						<ul>
+							<li><a href="#">probo primis</a></li>
+							<li><a href="#">officiis adipisci</a></li>
+							<li><a href="#">timeam scaevola</a></li>
+							<li><a href="#">doming scriptorem</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Ipsum</a>
+						<ul>
+							<li><a href="#">probo primis</a></li>
+							<li><a href="#">officiis adipisci</a></li>
+							<li><a href="#">timeam scaevola</a></li>
+							<li><a href="#">doming scriptorem</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Efficiendi</a></li>
+					<li><a href="#">Vituperata</a></li>
+					<li><a href="#">Temporibus</a></li>
 				</ul>
 
-				<h1>Titel van de pagina</h1>
+				<ul class="nav nav-secondary">
+					<li><a href="#">Nieuws</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices ante quis quam pulvinar, id laoreet sem lacinia. Sed leo leo, rhoncus sed ipsum auctor, blandit accumsan mi. Mauris elit turpis, rhoncus et aliquam sed, varius id felis. Nunc sodales risus non metus bibendum pellentesque. Duis congue tempor dolor, ac scelerisque arcu euismod at. <a href="#">Aliquam laoreet metus lacus</a>, a placerat nunc laoreet quis.
-				</p>
+				<div class="quick-search">
+					<form method="get" action="">
+						<input type="text" placeholder="Zoek op trefwoord" class="form-control" name="q">
+						<button type="submit">go</button>
+					</form>
+				</div>
+			</nav>
 
-				<h2>Normale bullet list</h2>
-				<ul>
-					<li><a href="#">Introductie</a></li>
-					<li><a href="#">Elektronische installaties</a></li>
-					<li><a href="#">Noodstroominstallaties</a></li>
-					<li><a href="#">(Brand)beveiliging</a></li>
-					<li><a href="#">Inspecties en onderhoud</a></li>
+			<div class="flexslider">
+				<ul class="slides">
+					<li><img src="http://placehold.it/1170x320&amp;text=Slide 1 (1170x320)" alt=""></li>
+					<!-- <li><img src="http://placehold.it/1170x320&amp;text=Slide 2 (1170x320)" alt=""></li> -->
 				</ul>
 			</div>
 
-			<div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
-
-				<nav class="nav-sub">
-					<ul>
-						<li><a href="#" class="active">Introductie</a></li>
-						<li><a href="#" class="">Elektronische installaties</a></li>
-						<li><a href="#" class="">Noodstroominstallaties</a></li>
-						<li><a href="#" class="">(Brand)beveiliging</a></li>
-						<li><a href="#" class="">Inspecties en onderhoud</a></li>
-					</ul>
-				</nav>
-
-			</div>
-
 		</div>
+	</header>
 
-	</div>
-</section>
-
-
-<footer class="footer">
-	<div class="footer-contact">
+	<main class="page-section page-body" id="content">
 		<div class="container">
 
 			<div class="row">
-				<div class="col-sm-4 mb-30">
-					<div itemscope itemtype="http://schema.org/Organization">
-						<span itemprop="name">Bedrijfsnaam</span>
-						<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-							<div itemprop="streetAddress">Straatnaam 123</div>
-							<span itemprop="postalCode">1234 AA</span>
-							<span itemprop="addressLocality">Plaats</span>
-						</div>
-						<span itemprop="email"><a href="mailto:info@email.nl">info@email.nl</a></span>
-						<span itemprop="telephone">+31 (0)174 123 456</span>
-					</div>
+
+				<div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+
+					<ul class="list-inline breadcrumb hidden-xs">
+						<li><a href="#">Home</a></li>
+						<li>Titel van de pagina</li>
+					</ul>
+
+					<h1>Titel van de pagina</h1>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices ante quis quam pulvinar, id laoreet sem lacinia. Sed leo leo, rhoncus sed ipsum auctor, blandit accumsan mi. Mauris elit turpis, rhoncus et aliquam sed, varius id felis. Nunc sodales risus non metus bibendum pellentesque. Duis congue tempor dolor, ac scelerisque arcu euismod at. <a href="#">Aliquam laoreet metus lacus</a>, a placerat nunc laoreet quis.
+					</p>
+
+					<h2>Normale bullet list</h2>
+					<ul>
+						<li><a href="#">Introductie</a></li>
+						<li><a href="#">Elektronische installaties</a></li>
+						<li><a href="#">Noodstroominstallaties</a></li>
+						<li><a href="#">(Brand)beveiliging</a></li>
+						<li><a href="#">Inspecties en onderhoud</a></li>
+					</ul>
 				</div>
-				<div class="col-sm-4 mb-30">
-					<form class="form-inline form-sm mb-10" role="form" action="" method="post">
-						<div class="form-group">
-							<label class="sr-only" for="inputEmail2">E-mail</label>
-							<input type="email" class="form-control form-control-inverted" id="inputEmail2" placeholder="E-mail" name="email">
-						</div>
-						<button type="submit" class="btn btn-warning">Inschrijven</button>
-					</form>
-					<p>Ontvang ook onze nieuwsbrief.</p>
+
+				<div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+
+					<nav class="nav-sub">
+						<ul>
+							<li><a href="#" class="active">Introductie</a></li>
+							<li><a href="#" class="">Elektronische installaties</a></li>
+							<li><a href="#" class="">Noodstroominstallaties</a></li>
+							<li><a href="#" class="">(Brand)beveiliging</a></li>
+							<li><a href="#" class="">Inspecties en onderhoud</a></li>
+						</ul>
+					</nav>
+
 				</div>
-				<div class="col-sm-4 mb-30">
-					<div class="text-right">
-						<a href="#" rel="external" title="twitter" class="btn-social"><img src="img/icon-twitter.png" alt="twitter"></a>
-						<a href="#" rel="external" title="facebook" class="btn-social"><img src="img/icon-facebook.png" alt="facebook"></a>
-						<a href="#" rel="external" title="linkedin" class="btn-social"><img src="img/icon-linkedin.png" alt="linkedin"></a>
-						<a href="#" rel="external" title="pinterest" class="btn-social"><img src="img/icon-pinterest.png" alt="pinterest"></a>
-					</div>
-				</div>
+
 			</div>
 
 		</div>
-	</div>
-	<div class="footer-about">
-		<div class="container">
-				&copy; copyright 2014 Bedrijfsnaam   &nbsp;
-				<a href="<?=site_url('voorwaarden')?>">Algemene voorwaarden</a>   &nbsp;
-				<a href="<?=site_url('disclaimer')?>">Disclaimer</a>
-		</div>
-	</div>
-</footer>
+	</main>
 
+
+	<footer class="page-section page-footer">
+		<div class="footer-contact">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-4 mb-30">
+						<div itemscope itemtype="http://schema.org/Organization">
+							<span itemprop="name">Bedrijfsnaam</span>
+							<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+								<div itemprop="streetAddress">Straatnaam 123</div>
+								<span itemprop="postalCode">1234 AA</span>
+								<span itemprop="addressLocality">Plaats</span>
+							</div>
+							<span itemprop="email"><a href="mailto:info@email.nl">info@email.nl</a></span>
+							<span itemprop="telephone">+31 (0)174 123 456</span>
+						</div>
+					</div>
+					<div class="col-sm-4 mb-30">
+						<form class="form-inline form-sm mb-10" role="form" action="" method="post">
+							<div class="form-group">
+								<label class="sr-only" for="inputEmail2">E-mail</label>
+								<input type="email" class="form-control form-control-inverted" id="inputEmail2" placeholder="E-mail" name="email">
+							</div>
+							<button type="submit" class="btn btn-warning">Inschrijven</button>
+						</form>
+						<p>Ontvang ook onze nieuwsbrief.</p>
+					</div>
+					<div class="col-sm-4 mb-30">
+						<div class="text-right">
+							<a href="#" rel="external" title="twitter" class="btn-social"><img src="img/icon-twitter.png" alt="twitter"></a>
+							<a href="#" rel="external" title="facebook" class="btn-social"><img src="img/icon-facebook.png" alt="facebook"></a>
+							<a href="#" rel="external" title="linkedin" class="btn-social"><img src="img/icon-linkedin.png" alt="linkedin"></a>
+							<a href="#" rel="external" title="pinterest" class="btn-social"><img src="img/icon-pinterest.png" alt="pinterest"></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer-about">
+			<div class="container">
+					&copy; copyright 2014 Bedrijfsnaam   &nbsp;
+					<a href="<?=site_url('voorwaarden')?>">Algemene voorwaarden</a>   &nbsp;
+					<a href="<?=site_url('disclaimer')?>">Disclaimer</a>
+			</div>
+		</div>
+	</footer>
+
+	<a href="#header" class="btn-scrolltop js-scrollto"><i class="icon icon-arrow-up-white"></i></a>
+
+</div>
 
 
 <!-- javascript page -->
