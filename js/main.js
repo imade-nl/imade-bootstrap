@@ -64,19 +64,26 @@ if( $('#search_field').length ){
 }
 
 
-
+// NU GEBRUIKEN MET ATTIRBUTE "REL"
 function setSameHeight()
 {
-	var minHeight = 0;
+	var elms = {};
 
 	$('.js-sameheight')
 		.css('min-height', '0px')
 		.each(function(){
+			var rel = $(this).attr('rel');
 			var elHeight = $(this).outerHeight(false);
-			if( elHeight > minHeight ) minHeight = elHeight;
+			if( elHeight > elms[rel] || elms[rel] == undefined ) elms[rel] = elHeight;
 		});
 
-	if( $(window).width() >= 480 ) $('.js-sameheight').css('min-height', minHeight + 'px');
+	if( $(window).width() >= 480 )
+	{
+		$.each(elms, function( index, value ) {
+			// console.log( index + ": " + value );
+			$( ".js-sameheight[rel='" + index + "']" ).css('min-height', value + 'px');
+		});
+	}
 }
 
 $(window).on('resize', function(){ setSameHeight(); });
