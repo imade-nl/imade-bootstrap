@@ -26,7 +26,7 @@
 				}
 
 				obj.click(function(e){
-					window.location = a.attr('href');
+					if(e.target.nodeName.toLowerCase() != 'a') window.location = a.attr('href');
 				});
 
 				obj.hover(function(){
