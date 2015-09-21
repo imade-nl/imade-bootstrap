@@ -1,17 +1,10 @@
 
-$('.js-nav-toggle').on('click', function(e){
-	toggleNav(e);
-});
-
-$('body').on('click', '.page-show-nav', function(e){
-	if($(e.target).closest('.page-nav').length == 0) toggleNav(e); // clicked outside .page-nav
-});
-
-function toggleNav(e){
-	$('.page').toggleClass('page-show-nav');
+$('.js-toggle').on('click', function(e){
+	$(this).toggleClass('open');
+	var target = $(this).data('toggle');
+	$(target).slideToggle(150);
 	e.preventDefault();
-	e.stopPropagation();
-}
+});
 
 
 $('.flexslider').flexslider({
