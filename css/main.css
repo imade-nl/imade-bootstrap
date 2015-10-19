@@ -246,6 +246,11 @@ p, ul, ol{
    	ICONS
    ========================================================================== */
 
+[class^="i-"],
+[class*=" i-"] {
+	display: inline-block;
+	vertical-align: middle;
+}
 
 .icon-nav{
 	display: inline-block;

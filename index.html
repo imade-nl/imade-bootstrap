@@ -16,7 +16,7 @@
 		$page['og_image'] or $page['og_image'] = $article['foto'];
 		$page['og_image'] or $page['og_image'] = $article['foto1'];
 		$page['og_image'] or $page['og_image'] = $article['fotos'][0]['file'];
-		if($page['og_image']) $page['og_image'] = 'http://www.WEBSITE.nl/image/' . $page['og_image'];
+		if($page['og_image']) $page['og_image'] = SITE_URL . '/image/' . $page['og_image'];
 
 		$page['og_image'] or $page['og_image'] = asset("img/social.jpg");
 		$meta_description = $page['description'] ?: substr(strip_tags($article['tekst']), 0, 240) ;
