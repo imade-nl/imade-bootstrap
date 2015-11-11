@@ -7,12 +7,23 @@ $('.js-toggle').on('click', function(e){
 });
 
 
-$('.flexslider').flexslider({
-	controlNav: true,
-	directionNav: false,
-	slideshowSpeed: 3000,
-	animationSpeed: 800
+$(".js-slider").owlCarousel({
+
+	navigation : true, // Show next and prev buttons
+	// navigationText: ['<i class="i-angle-left"></i>', '<i class="i-angle-right"></i>'],
+	slideSpeed : 3000,
+	paginationSpeed : 400,
+	singleItem: true
+
+	// "singleItem:true" is a shortcut for:
+	// items : 1,
+	// itemsDesktop : false,
+	// itemsDesktopSmall : false,
+	// itemsTablet: false,
+	// itemsMobile : false
+
 });
+
 
 $('.js-popup').magnificPopup({
 	type:'image',
