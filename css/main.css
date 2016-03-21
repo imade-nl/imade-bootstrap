@@ -247,8 +247,15 @@ p, ul, ol{
 
 [class^="i-"],
 [class*=" i-"] {
-	display: inline-block;
-	vertical-align: middle;
+    display: inline-block;
+    line-height: 0.9;
+    vertical-align: middle;
+}
+
+[class^="i-"]:before,
+[class*=" i-"]:before {
+	/*vertical-align: bottom;
+	display: inline-block;*/
 }
 
 .icon-nav{

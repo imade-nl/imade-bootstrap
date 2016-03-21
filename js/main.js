@@ -1,4 +1,16 @@
 
+$('.nav-primary').on('click', 'a', function(e){
+	var a = $(this);
+	var open = $(e.toElement).hasClass('open'); // click on icon to slideUp
+
+	if( a.next().length && !open )
+	{
+		a.toggleClass('open').next().slideToggle(150);
+		e.preventDefault();
+	}
+});
+
+
 $('.js-toggle').on('click', function(e){
 	$(this).toggleClass('open');
 	var target = $(this).data('toggle');
