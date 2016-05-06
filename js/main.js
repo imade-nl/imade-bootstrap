@@ -21,9 +21,9 @@ $('.js-toggle').on('click', function(e){
 
 $(".js-slider").owlCarousel({
 
-	navigation : true, // Show next and prev buttons
+	navigation : false, // Show next and prev buttons
 	// navigationText: ['<i class="i-angle-left"></i>', '<i class="i-angle-right"></i>'],
-	slideSpeed : 3000,
+	slideSpeed : 300,
 	paginationSpeed : 400,
 	singleItem: true
 

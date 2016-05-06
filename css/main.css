@@ -12,7 +12,7 @@ body {
 	font-size: 14px;
 	line-height: 24px;
 	color: #333;
-	background-color: #FFF;
+	background-color: #DDD;
 }
 
 a {
@@ -72,15 +72,8 @@ p, ul, ol{
    ========================================================================== */
 
 .container{
+	padding: 0;
 	position: relative;
-}
-
-
-@media screen and (min-width: 992px) {
-	.container {
-		padding-left: 0;
-		padding-right: 0;
-	}
 }
 
 
@@ -88,85 +81,51 @@ p, ul, ol{
    	PAGE
    ========================================================================== */
 
-@media screen and (max-width: 767px) {
-	.page{
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-		background-color: #333;
-	}
+.page{
+	background-color: #FFF;
+}
 
-	.page-section,
-	.page-nav{
-		-webkit-transition: left 0.2s ease-in;
-		-moz-transition: left 0.2s ease-in;
-		-ms-transition: left 0.2s ease-in;
-		-o-transition: left 0.2s ease-in;
-		transition: left 0.2s ease-in;
+.page-section{
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.page-section--header{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.page-section--body{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.page-section--footer{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+	.page{
+		margin-top: 30px;
 	}
 
 	.page-section{
-		left: 0;
-		position: relative;
-		background-color: #FFF;
-	}
-
-	.page-nav{
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: -80%;
-		width: 80%;
-		overflow: auto;
-		cursor: auto;
-	}
-
-	.page-show-nav .page-section{
-		left: 80%;
-		position: relative;
-		cursor: pointer;
-	}
-
-	.page-show-nav .page-section:after{
-		content: "";
-		display: block;
-		position: absolute;
-		z-index: 99;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		background-color: rgba(255,255,255,0.2);
-	}
-
-	.page-show-nav .page-nav{
-		left: 0;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
+@media screen and (min-width: 992px) {
+	.page{
+		margin-top: 30px;
+	}
 
-.page-header{
-	padding-top: 15px;
-}
-
-.page-body{
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-.page-footer{
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-
-/* ==========================================================================
-   	HEADER
-   ========================================================================== */
-
-.header-top{
-	text-align: right;
-	padding-bottom: 10px;
+	.page-section{
+		padding-left: 45px;
+		padding-right: 45px;
+	}
 }
 
 
@@ -175,14 +134,135 @@ p, ul, ol{
    ========================================================================== */
 
 .logo{
-	margin-right: 120px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-right: 130px;
+	margin-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
 	.logo{
+		margin-top: 20px;
+		margin-bottom: 20px;
 		margin-right: 0;
 		float: left;
+	}
+}
+
+
+/* ==========================================================================
+   	NAV-PRIMARY
+   ========================================================================== */
+
+.nav-primary{
+	clear: both;
+	display: none;
+	margin-left: -15px;
+	margin-right: -15px;
+	background-color: #023576;
+}
+
+.nav-primary > li{
+	border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-primary a{
+	display: block;
+	padding: 10px 15px;
+	color: #FFF;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.nav-primary a.active{
+	background-color: rgba(255,255,255,0.1);
+}
+
+
+@media screen and (min-width: 768px) {
+	.nav-primary{
+		clear: none;
+		float: right;
+		display: block !important;
+		margin-top: 80px;
+		background-color: transparent;
+	}
+
+	.nav-primary > li{
+		float: left;
+		border-top: none;
+	}
+
+	.nav-primary a{
+		color: #333;
+		border-top: none;
+	}
+
+	.nav-primary a.active{
+		color: #428BCA;
+		background-color: transparent;
+	}
+}
+
+
+@media screen and (min-width: 992px) {
+	.nav-primary{
+		margin-top: 80px;
+	}
+}
+
+
+/* ==========================================================================
+   	NAV-SECONDARY
+   ========================================================================== */
+
+.nav-secondary{
+	position: absolute;
+	right: 15px;
+	top: 20px;
+	font-size: 16px;
+}
+
+.nav-secondary > li{
+	float: left;
+}
+
+.nav-secondary a{
+	color: #023576;
+	text-decoration: none;
+}
+
+.nav-secondary a:hover{
+	color: #023576;
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+	.nav-secondary{
+		right: 30px;
+	}
+
+	.nav-secondary > li + li{
+		padding-left: 10px;
+		margin-left: 10px;
+		position: relative;
+	}
+
+	.nav-secondary > li + li:before{
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		height: 18px;
+		width: 1px;
+		margin-top: -8px;
+		background-color: #DDD;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.nav-secondary{
+		right: 45px;
 	}
 }
 
@@ -194,50 +274,95 @@ p, ul, ol{
 .nav-toggle {
 	position: absolute;
 	right: 15px;
-	top: 50px;
+	top: 60px;
 	display: inline-block;
 	padding: 8px 10px;
 	cursor: pointer;
 	background-color: rgba(0,0,0,0.1);
 	text-decoration: none;
 	color: #333;
-	font-weight: bold;
 	font-size: 16px;
 }
 
-.nav-toggle:hover {
+.nav-toggle:hover,
+.nav-toggle:hover,
+.nav-toggle:hover{
 	color: #333;
 	text-decoration: none;
-	background-color: rgba(0,0,0,0.2);
 }
 
 .nav-toggle i{
 	margin-right: 4px;
 }
 
-.nav-close{
+@media screen and (min-width: 768px) {
+	.nav-toggle{
+		display: none !important;
+	}
+}
+
+
+/* ==========================================================================
+   	QUICK SEARCH
+   ========================================================================== */
+
+.quick-search{
+	display: none;
+	clear: right;
 	float: right;
-	margin: 10px;
-	padding: 8px 10px;
-	display: inline-block;
-	cursor: pointer;
-	background-color: rgba(0,0,0,0.1);
-	text-decoration: none;
-	color: #FFF;
+	max-width: 180px;
+	margin-top: 30px;
+	position: relative;
 }
 
-.nav-close:hover{
-	text-decoration: none;
-	color: #FFF;
-	background-color: rgba(0,0,0,0.2);
+.quick-search button{
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	height: 32px;
+	width: 32px;
+	border: none;
+	background: url("../img/icon-search.png") no-repeat 50% 50% transparent;
+	overflow: hidden;
+	text-indent: -9999px;
 }
-
 
 @media screen and (min-width: 768px) {
-	.nav-toggle,
-	.nav-close{
-		display: none;
-	}
+	.quick-search{ display: block; }
+}
+
+
+/* ==========================================================================
+   	BUTTONS
+   ========================================================================== */
+
+.btn{
+	text-decoration: none;
+}
+
+.btn-scrolltop{
+	opacity: 0;
+	display: inline-block;
+	position: fixed;
+	z-index: 80;
+	right: 15px;
+	bottom: 15px;
+	padding: 10px;
+	border-radius: 4px;
+	background-color: rgba(0,0,0,0.5);
+	-webkit-transition: opacity 0.5s ease-in;
+	-moz-transition: opacity 0.5s ease-in;
+	-ms-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+}
+
+.btn-scrolltop:hover{
+	background-color: rgba(0,0,0,0.65);
+}
+
+.btn-scrolltop-show{
+	opacity: 1;
 }
 
 
@@ -319,161 +444,6 @@ p, ul, ol{
 	width: 21px;
 	height: 14px;
 	background: url("../img/arrow-up-white.png") no-repeat 0 0;
-}
-
-/* ==========================================================================
-   	NAV
-   ========================================================================== */
-
-.nav{
-	clear: both;
-}
-
-.nav a{
-	display: block;
-	padding: 10px 15px;
-	color: #FFF;
-	font-size: 18px;
-	text-decoration: none;
-	border-top: 1px solid #444;
-}
-
-.nav a:hover,
-.nav a:focus{
-	background-color: rgba(255,255,255,0.1);
-}
-
-.nav a.active{
-	background-color: #428BCA;
-}
-
-.nav li ul a{
-	font-size: 16px;
-	padding-left: 30px;
-}
-
-
-@media screen and (min-width: 768px) {
-	.nav{
-		padding-top: 40px;
-	}
-
-	.nav li{
-		float: left;
-	}
-
-	.nav a{
-		color: #333;
-		border-top: none;
-	}
-
-	.nav a.active{
-		color: #428BCA;
-		background-color: transparent;
-	}
-
-	.nav li ul{
-		display: none;
-	}
-}
-
-
-/* ==========================================================================
-   	NAV-PRIMARY
-   ========================================================================== */
-
-@media screen and (min-width: 768px) {
-	.nav-primary{
-		float: right;
-	}
-}
-
-
-/* ==========================================================================
-   	NAV-SECONDARY
-   ========================================================================== */
-
-@media screen and (min-width: 768px) {
-	.nav-secondary{
-		position: absolute;
-		right: 15px;
-		top: 20px;
-		font-size: 16px;
-	}
-}
-
-
-
-/* ==========================================================================
-   	QUICK SEARCH
-   ========================================================================== */
-
-.quick-search{
-	display: none;
-	clear: right;
-	float: right;
-	max-width: 180px;
-	margin-top: 30px;
-	position: relative;
-}
-
-.quick-search button{
-	position: absolute;
-	right: 1px;
-	top: 1px;
-	height: 32px;
-	width: 32px;
-	border: none;
-	background: url("../img/icon-search.png") no-repeat 50% 50% transparent;
-	overflow: hidden;
-	text-indent: -9999px;
-}
-
-@media screen and (min-width: 768px) {
-	.quick-search{ display: block; }
-}
-
-
-/* ==========================================================================
-   	LEADER
-   ========================================================================== */
-
-.leader{
-}
-
-
-
-/* ==========================================================================
-   	BUTTONS
-   ========================================================================== */
-
-.btn{
-	text-decoration: none;
-}
-
-.btn-scrolltop{
-	opacity: 0;
-	display: inline-block;
-	position: fixed;
-	z-index: 80;
-	right: 15px;
-	bottom: 15px;
-	padding: 10px;
-	border-radius: 4px;
-	background-color: rgba(0,0,0,0.5);
-	-webkit-transition: opacity 0.5s ease-in;
-	-moz-transition: opacity 0.5s ease-in;
-	-ms-transition: opacity 0.5s ease-in;
-	-o-transition: opacity 0.5s ease-in;
-	transition: opacity 0.5s ease-in;
-}
-
-.btn-scrolltop:hover{
-	background-color: rgba(0,0,0,0.65);
-}
-
-.btn-scrolltop-show{
-	opacity: 1;
 }
 
 
