@@ -173,3 +173,18 @@
 .i-chevron-thin-up:before {
   content: "\53";
 }
+.i-download:before {
+  content: "\54";
+}
+.i-angle-lg-down:before {
+  content: "\55";
+}
+.i-angle-lg-left:before {
+  content: "\56";
+}
+.i-angle-lg-right:before {
+  content: "\57";
+}
+.i-angle-lg-up:before {
+  content: "\58";
+}
